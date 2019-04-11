@@ -6,7 +6,7 @@ This repository contains [Examples](Examples) projects for [GroupDocs.Conversion
 
 <p align="center">
 
-  <a title="Download complete GroupDocs.Conversion Cloud SDK Examples for ruby source code" href="https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-ruby-samples-/archive/master.zip>
+  <a title="Download complete GroupDocs.Conversion Cloud SDK Examples for ruby source code" href="https://github.com/groupdocs-conversion-cloud/groupdocs-conversion-cloud-ruby-samples-/archive/master.zip">
 	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
   </a>
 </p>
