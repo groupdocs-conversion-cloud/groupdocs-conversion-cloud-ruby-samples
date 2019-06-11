@@ -6,7 +6,7 @@ class File_Formats
   def self.Conversion_Ruby_Get_All_Supported_Formats_For_Document()
 
     # Getting instance of the API
-    api = Common_Utilities.Get_ConversionApi_Instance()
+    api = Common_Utilities.Get_InfoApi_Instance()
 
     $request = GroupDocsConversionCloud::GetSupportedConversionTypesRequest.new("one-page.docx", $myStorage, "")
 

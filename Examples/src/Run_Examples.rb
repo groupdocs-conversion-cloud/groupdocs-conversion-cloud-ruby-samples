@@ -1,9 +1,9 @@
 require 'common_utilities/Utils.rb'
 
 # Get your app_sid and app_key at https://dashboard.groupdocs.cloud (free registration is required).
-$app_sid = "d215ce72-1609-4282-8d55-5810942236fb"
-$app_key = "715d18b0afef2f303882c769921fe05a"
-$myStorage = "MyStorage" #Put your storage name here
+$app_sid = "XXXXX-XXXXX-XXXXX-XXXXX-XXXXX"
+$app_key = "XXXXXXXXXXXXXXX"
+$myStorage = "XXXXX" #Put your storage name here
 $host_url = "http://api.groupdocs.cloud"   # Put your Host URL here
 
 class Run_Examples
@@ -34,6 +34,14 @@ class Run_Examples
   #  require 'Supported_File_Formats\Conversion_Ruby_Get_All_Supported_Formats_For_Document.rb'
   #  puts("* Executing Conversion_Ruby_Get_All_Supported_Formats_For_Document...")
   #  File_Formats.Conversion_Ruby_Get_All_Supported_Formats_For_Document()
+
+  ##########################################
+  puts("*** Executing Get_Document_Information...")
+  ##########################################
+
+  #  require 'Document_Information\Conversion_Ruby_Get_Document_Information.rb'
+  #  puts("* Executing Conversion_Ruby_Get_Document_Information...")
+  #  Document_Information.Conversion_Ruby_Get_Document_Information()
 
   ###########################################
   #  puts("*** Executing Working_With_Storage...")
