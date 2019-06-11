@@ -6,7 +6,7 @@ class Working_With_Conversions
   def self.Conversion_Ruby_Convert_To_Any_Format_Stream(*args)
 
     # Getting instance of the API
-    api = Common_Utilities.Get_ConversionApi_Instance()
+    api = Common_Utilities.Get_ConvertApi_Instance()
 
     $settings = GroupDocsConversionCloud::ConvertSettings.new()
     $settings.storage_name = $myStorage;

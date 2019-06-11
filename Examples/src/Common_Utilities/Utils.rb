@@ -9,9 +9,14 @@ $host_url = "http://api.groupdocs.cloud"   # Put your Host URL here
 $myStorage = "MyStorage"
 
 class Common_Utilities
-  def self.Get_ConversionApi_Instance()
+  def self.Get_ConvertApi_Instance()
     # Create instance of the API
-    return GroupDocsConversionCloud::ConversionApi.from_keys($app_sid, $app_key)
+    return GroupDocsConversionCloud::ConvertApi.from_keys($app_sid, $app_key)
+  end
+
+  def self.Get_InfoApi_Instance()
+    # Create instance of the API
+    return GroupDocsConversionCloud::InfoApi.from_keys($app_sid, $app_key)
   end
 
   def self.Get_StorageApi_Instance()
