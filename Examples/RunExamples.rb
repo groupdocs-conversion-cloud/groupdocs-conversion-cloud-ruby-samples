@@ -70,6 +70,15 @@ class RunExamples
   require './LoadOptionsByDocumentType/Email/ConvertEmailWithTimezoneOffset.rb'
   ConvertEmailWithTimezoneOffset.Run() 
 
+  require './LoadOptionsByDocumentType/Email/ConvertEmailWithFieldLabels.rb'
+  ConvertEmailWithFieldLabels.Run() 
+  
+  require './LoadOptionsByDocumentType/Email/ConvertEmailWithOriginalDate.rb'
+  ConvertEmailWithOriginalDate.Run() 
+  
+  require './LoadOptionsByDocumentType/Html/ConvertHtmlWithPageNumbering.rb'
+  ConvertHtmlWithPageNumbering.Run()   
+
   require './LoadOptionsByDocumentType/Note/ConvertNoteBySpecifyingFontSubstitution.rb'
   ConvertNoteBySpecifyingFontSubstitution.Run() 
 

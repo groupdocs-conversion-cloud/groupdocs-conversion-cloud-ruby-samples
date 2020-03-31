@@ -2,8 +2,9 @@
 require 'groupdocs_conversion_cloud'
 require './Common.rb'
 
-# This example demonstrates how to convert word processing document into html document
-class ConvertToHtml
+# This example demonstrates how to convert msg document into pdf document
+# and replace field labels to custom values
+class ConvertEmailWithFieldLabels
     
     def self.Run()
         # Create necessary API instances
@@ -11,14 +12,16 @@ class ConvertToHtml
         
         # Prepare convert settings
         settings = GroupDocsConversionCloud::ConvertSettings.new
-        settings.file_path = "WordProcessing/four-pages.docx"
-        settings.format = "html"
-        convertOptions = GroupDocsConversionCloud::HtmlConvertOptions.new
-        convertOptions.from_page = 1
-        convertOptions.pages_count = 1
-        convertOptions.fixed_layout = true
-        convertOptions.fixed_layout_show_borders = true
-        settings.convert_options = convertOptions
+        settings.file_path = "Email/sample.msg"
+        settings.format = "pdf"
+
+        loadOptions = GroupDocsConversionCloud::EmailLoadOptions.new
+        fieldLabel = GroupDocsConversionCloud::FieldLabel.new
+        fieldLabel.field = "From"
+        fieldLabel.label = "Sender"
+        loadOptions.field_labels = [fieldLabel]
+
+        settings.load_options = loadOptions
         settings.output_path = "converted"
 
         # Convert
