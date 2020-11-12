@@ -7,7 +7,7 @@ class ConvertTxtByControllingLeadingSpacesBehavior
     
     def self.Run()
         # Create necessary API instances
-        apiInstance = GroupDocsConversionCloud::ConvertApi.from_keys($app_sid, $app_key)
+        apiInstance = GroupDocsConversionCloud::ConvertApi.from_config($config)
         
         # Prepare convert settings
         settings = GroupDocsConversionCloud::ConvertSettings.new

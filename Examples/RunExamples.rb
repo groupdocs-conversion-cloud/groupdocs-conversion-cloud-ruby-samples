@@ -4,6 +4,9 @@ require './Common.rb'
 $app_sid = "XXXX-XXXX-XXXX-XXXX"
 $app_key = "XXXXXXXXXXXXXXXX"
 
+$config = GroupDocsConversionCloud::Configuration.new($app_sid, $app_key)
+$config.api_base_url = "https://api.groupdocs.cloud"
+
 class RunExamples
 
   # Uploading sample test files from local disk to cloud storage
@@ -37,6 +40,9 @@ class RunExamples
 
   require './Convert/ConvertToSpreadsheet.rb'
   ConvertToSpreadsheet.Run() 
+
+  require './Convert/ConvertToPdfDirect.rb'
+  ConvertToPdfDirect.Run() 
 
   # Document conversion examples with common options
   require './Common/AddWatermark.rb'

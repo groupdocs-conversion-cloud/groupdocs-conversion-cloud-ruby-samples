@@ -7,7 +7,7 @@ class AddWatermark
     
     def self.Run()
         # Create necessary API instances
-        apiInstance = GroupDocsConversionCloud::ConvertApi.from_keys($app_sid, $app_key)
+        apiInstance = GroupDocsConversionCloud::ConvertApi.from_config($config)
         
         # Prepare convert settings
         watermark = GroupDocsConversionCloud::WatermarkOptions.new        

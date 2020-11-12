@@ -6,7 +6,7 @@ require './Common.rb'
 class GetSupportedConversions
     
     def self.Run()        
-        infoApi = GroupDocsConversionCloud::InfoApi.from_keys($app_sid, $app_key)        
+        infoApi = GroupDocsConversionCloud::InfoApi.from_config($config)        
         result = infoApi.get_supported_conversion_types(GroupDocsConversionCloud::GetSupportedConversionTypesRequest.new())
         puts("Formats count: " + result.length.to_s)
     end
