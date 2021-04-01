@@ -54,6 +54,9 @@ class RunExamples
   require './Common/ConvertSpecificPages.rb'
   ConvertSpecificPages.Run() 
 
+  require './Common/ConvertUsingCustomFont.rb'
+  ConvertUsingCustomFont.Run()   
+
   # Document conversion examples with loading options
   require './LoadOptionsByDocumentType/Cad/ConvertCadAndSpecifyLoadOptions.rb'
   ConvertCadAndSpecifyLoadOptions.Run() 
