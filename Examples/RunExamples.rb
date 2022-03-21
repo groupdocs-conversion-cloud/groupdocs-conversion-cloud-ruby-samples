@@ -44,6 +44,9 @@ class RunExamples
   require './Convert/ConvertToPdfDirect.rb'
   ConvertToPdfDirect.Run() 
 
+  require './Convert/ConvertToPdfDirectOptions.rb'
+  ConvertToPdfDirectOptions.Run() 
+
   # Document conversion examples with common options
   require './Common/AddWatermark.rb'
   AddWatermark.Run() 
