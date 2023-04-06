@@ -13,7 +13,7 @@ class ConvertToHtml
         settings = GroupDocsConversionCloud::ConvertSettings.new
         settings.file_path = "WordProcessing/four-pages.docx"
         settings.format = "html"
-        convertOptions = GroupDocsConversionCloud::HtmlConvertOptions.new
+        convertOptions = GroupDocsConversionCloud::WebConvertOptions.new
         convertOptions.from_page = 1
         convertOptions.pages_count = 1
         convertOptions.fixed_layout = true
