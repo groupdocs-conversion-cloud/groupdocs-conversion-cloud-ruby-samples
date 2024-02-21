@@ -20,7 +20,7 @@ class ConvertToPdfResponseBody
         convertOptions.center_window = true
         convertOptions.compress_images = false
         convertOptions.display_doc_title = true
-        convertOptions.dpi = 1024.0
+        convertOptions.dpi = 1024
         convertOptions.fit_window = false
         convertOptions.from_page = 1
         convertOptions.grayscale = false
