@@ -148,4 +148,10 @@ class RunExamples
   require './LoadOptionsByDocumentType/WordProcessing/ConvertWordProcessingBySpecifyingFontSubstitution.rb'
   ConvertWordProcessingBySpecifyingFontSubstitution.Run()    
 
+  require './Convert/Async/ConvertToPdfAsync.rb'    
+  ConvertToPdfAsync.Run() 
+
+  require './Convert/Async/ConvertToPdfDirectAsync.rb'
+  ConvertToPdfDirectAsync.Run() 
+
 end

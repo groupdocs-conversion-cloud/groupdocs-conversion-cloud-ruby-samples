@@ -1,5 +1,4 @@
 # Import modules
-require 'groupdocs_conversion_cloud'
 require './Common.rb'
 
 # This example demonstrates how to convert word processing document into image

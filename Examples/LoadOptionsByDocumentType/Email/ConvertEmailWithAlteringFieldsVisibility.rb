@@ -1,5 +1,4 @@
 # Import modules
-require 'groupdocs_conversion_cloud'
 require './Common.rb'
 
 # This example demonstrates how to convert msg document into pdf document
@@ -18,7 +17,6 @@ class ConvertEmailWithAlteringFieldsVisibility
         loadOptions.display_header = false
         loadOptions.display_from_email_address = false
         loadOptions.display_to_email_address = false
-        loadOptions.display_email_address = false
         loadOptions.display_cc_email_address = false
         loadOptions.display_bcc_email_address = false
 

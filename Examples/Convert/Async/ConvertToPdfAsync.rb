@@ -1,12 +1,12 @@
 # Import modules
 require './Common.rb'
 
-# This example demonstrates how to convert word processing document into pdf document
-class ConvertToPdf
+# This example demonstrates how to convert word processing document into pdf document asyncronously
+class ConvertToPdfAsync
     
     def self.Run()
         # Create necessary API instances
-        apiInstance = GroupDocsConversionCloud::ConvertApi.from_config($config)
+        apiInstance = GroupDocsConversionCloud::AsyncApi.from_config($config)
         
         # Prepare convert settings
         settings = GroupDocsConversionCloud::ConvertSettings.new
@@ -38,9 +38,21 @@ class ConvertToPdf
         settings.output_path = "converted"
 
         # Convert
-        result = apiInstance.convert_document(GroupDocsConversionCloud::ConvertDocumentRequest.new(settings))
-
-        puts("Document converted: " + result[0].url)
+        operation_id = apiInstance.start_convert_and_save(GroupDocsConversionCloud::StartConvertAndSaveRequest.new(settings))  
+        operation_id = operation_id.delete_prefix('"').delete_suffix('"')      
+        puts("Operation ID: " + operation_id)
+        while true
+            sleep(1)
+            result = apiInstance.get_operation_status(GroupDocsConversionCloud::GetOperationStatusRequest.new(operation_id))
+            if result.status == "Finished"
+                puts("Document converted: " + result.result[0].url)
+                break
+            elsif result.status == "Failed"
+                puts("Operation failed: " + result.error)
+                break
+            else
+                puts("Operation status: " + result.status)
+            end
+        end
     end
-
 end
