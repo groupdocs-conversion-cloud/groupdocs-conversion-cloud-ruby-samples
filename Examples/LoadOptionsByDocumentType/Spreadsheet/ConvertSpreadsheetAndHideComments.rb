@@ -14,7 +14,7 @@ class ConvertSpreadsheetAndHideComments
         settings.format = "pdf"
 
         loadOptions = GroupDocsConversionCloud::SpreadsheetLoadOptions.new
-        loadOptions.hide_comments = true
+        loadOptions.print_comments = "PrintNoComments"
         loadOptions.one_page_per_sheet = true
 
         settings.load_options = loadOptions

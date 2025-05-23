@@ -14,7 +14,7 @@ class ConvertPresentationByHidingComments
         settings.format = "pdf"
 
         loadOptions = GroupDocsConversionCloud::PresentationLoadOptions.new
-        loadOptions.hide_comments = true
+        loadOptions.comments_position = "None"
 
         settings.load_options = loadOptions
         settings.output_path = "converted"
