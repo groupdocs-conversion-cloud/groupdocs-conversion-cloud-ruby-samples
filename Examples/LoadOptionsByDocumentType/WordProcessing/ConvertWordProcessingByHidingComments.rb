@@ -14,7 +14,7 @@ class ConvertWordProcessingByHidingComments
         settings.format = "pdf"
 
         loadOptions = GroupDocsConversionCloud::WordProcessingLoadOptions.new
-        loadOptions.hide_comments = true
+        loadOptions.comment_display_mode = "Hidden"
 
         settings.load_options = loadOptions
         settings.output_path = "converted"
