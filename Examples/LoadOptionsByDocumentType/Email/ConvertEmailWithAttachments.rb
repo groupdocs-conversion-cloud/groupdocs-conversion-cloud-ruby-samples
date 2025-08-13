@@ -14,7 +14,7 @@ class ConvertEmailWithAttachments
         settings.format = "pdf"
 
         loadOptions = GroupDocsConversionCloud::EmailLoadOptions.new
-        loadOptions.convert_attachments = true
+        loadOptions.display_attachments = true
 
         settings.load_options = loadOptions
         settings.output_path = "converted"
