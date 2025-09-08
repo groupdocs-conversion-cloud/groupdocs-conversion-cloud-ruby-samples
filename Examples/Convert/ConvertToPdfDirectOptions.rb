@@ -11,7 +11,7 @@ class ConvertToPdfDirectOptions
         
         # Prepare request
         file = File.open("Resources\\WordProcessing\\password-protected.docx", "r")
-        load_options = GroupDocsConversionCloud::DocxLoadOptions.new
+        load_options = GroupDocsConversionCloud::WordProcessingLoadOptions.new
         load_options.format = "docx"
         load_options.password = "password"
         request = GroupDocsConversionCloud::ConvertDocumentDirectRequest.new("pdf", file, nil, nil, load_options)

@@ -13,7 +13,7 @@ class ConvertToPdfAsync
         settings.file_path = "WordProcessing/password-protected.docx"
         settings.format = "pdf"
 
-        loadOptions = GroupDocsConversionCloud::DocxLoadOptions.new
+        loadOptions = GroupDocsConversionCloud::WordProcessingLoadOptions.new
         loadOptions.password = "password"
         convertOptions = GroupDocsConversionCloud::PdfConvertOptions.new
         convertOptions.center_window = true
