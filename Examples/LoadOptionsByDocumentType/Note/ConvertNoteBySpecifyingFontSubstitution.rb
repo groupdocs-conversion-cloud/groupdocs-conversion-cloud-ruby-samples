@@ -13,7 +13,7 @@ class ConvertNoteBySpecifyingFontSubstitution
         settings.file_path = "Note/sample.one"
         settings.format = "pdf"
 
-        loadOptions = GroupDocsConversionCloud::OneLoadOptions.new
+        loadOptions = GroupDocsConversionCloud::NoteLoadOptions.new
         fonts = Hash.new
         fonts["Tahoma"] = "Arial"
         fonts["Times New Roman"] = "Arial"
