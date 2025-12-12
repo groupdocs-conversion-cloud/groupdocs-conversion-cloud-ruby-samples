@@ -20,7 +20,7 @@ class ConvertToWordProcessing
         loadOptions.flatten_all_fields = true
 
         settings.load_options = loadOptions
-        settings.convert_options = GroupDocsConversionCloud::DocxConvertOptions.new
+        settings.convert_options = GroupDocsConversionCloud::WordProcessingConvertOptions.new
         settings.output_path = "converted"
 
         # Convert
